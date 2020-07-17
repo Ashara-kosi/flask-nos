@@ -1,0 +1,186 @@
+@font-face{
+    font-family: 'Gilroy';
+    src:url("Gilroy-Regular.woff") format("woff");
+}
+* {
+    box-sizing: border-box;
+}
+
+html,body{
+    font-family: 'Gilroy';
+    max-width: 100%;
+    background: #E5E5E5;
+}
+.navbar-brand{
+    display: flex;
+    flex-direction: row;
+}
+.brand-text{
+    display: flex;
+    flex-direction:column ;
+    color: #333333;
+    margin: auto 0;
+
+}
+.text-first{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 21px;
+}
+.text-second{
+    font-size: 16px;
+    line-height: 19px;
+}
+.new-app{
+    margin-top: 50px;
+}
+.new{
+    max-width: 100%;
+}
+.new-header{
+    color: #D94A64;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+}
+.new-title {
+    color: #333333;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 57px;
+}
+.new-content{
+    color: #7D7D7D;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+.feat{
+    width: 75%;
+}
+.feat-header{
+    color: #D94A64;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+
+}
+.feat-title{
+    color: #333333;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 57px;
+
+}
+.feat-content{
+    color: #7D7D7D;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+}
+.tnp-form {
+    width: 95%;
+    position: relative;
+  }
+  .tnp-subscription {
+    max-width: 500px;
+    font-size: 15px;
+    display: block;
+    padding: 0px 0px;
+    border-radius: 10px ;
+
+  }
+  .tnp-email{
+      width: 100%;
+      padding-left: 20px;
+      height: 90px;
+      border: 2px solid #E5E5E5;
+      border-radius: 10px ;
+  }
+  .tnp-submit{
+    position:absolute;
+    width: 135px;
+    height: 80px;
+    border: 2px;
+    border-radius: 10px ;
+    background: #752836;;
+    right: 5px;
+    top: 5px;
+  }
+  .tnp-submit:hover,.tnp-submit:active{
+      background-color: #522029;
+  }
+  .margin{
+      margin-top: 120px;
+  }
+  .header{
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    color: #D94A64; 
+  }
+  .title{
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 57px;
+    color: #333333;
+  }
+  .content{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #7D7D7D;
+  }
+   /* footer */
+.footer{
+    background: rgba(255, 146, 165, 0.5);
+    height: auto;
+    max-width: 100%;
+}
+.footer-text{
+    width: 75%;
+    margin: 20px;
+    
+}
+.new-content2{
+    color: #333333;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+.tnp-form2 {
+    width: 95%;
+    position: relative;
+  }
+  .tnp-subscription2 {
+    max-width: 500px;
+    font-size: 15px;
+    display: block;
+    padding: 0px 0px;
+    border-radius: 10px ;
+
+  }
+  .tnp-email2{
+      width: 100%;
+      padding-left: 20px;
+      height: 50px;
+      border: 2px solid #E5E5E5;
+      border-radius: 10px ;
+  }
+  .tnp-submit2{
+    position:absolute;
+    width: 120px;
+    height: 40px;
+    border: 2px;
+    border-radius: 10px ;
+    background: #752836;;
+    right: 5px;
+    top: 5px;
+  }
+  .tnp-submit2:hover,.tnp-submit2:active{
+      background-color: #522029;
+  }
+
+.footer-image{
+    width: 25%;
+}

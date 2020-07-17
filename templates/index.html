@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Nostalgia</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet">
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container-fluid brand">
+        <a class="navbar-brand" ><img src="{{ url_for('static',filename = 'img/Brain Emoji.svg')}}">
+            <div class="brand-text">
+                <span class="text-first">Nostalgia </span>
+                <span class="text-second">...relieving your childhood over again</span>
+            </div>
+        </a>  
+    </div>  
+</nav>
+<!-- Newapp -->
+<br>
+<br>
+<br>
+<div class="container">
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 new ">
+        <p class="new-header">New app in the block</p>
+        <p class="new-title" >Nostalgia would never let you worry about your childhood memories again.</p> 
+        <br>
+        <p class="new-content">Be the first to get notified about our app release</p>
+        <div class=" col-8 tnp-subscription">
+        {% if message == 'success' %}
+            <p>Email captured successfully</p>
+        {% elif message == 'failed' %}
+            <p>Email already captured</p>
+        {% endif %}
+            
+            <form class = tnp-form  method="POST"  action="{{ url_for('index')}}">
+                <input class="tnp-email" type="email" name='email' placeholder="email address">
+                <input class="tnp-submit btn-primary" type="submit" value="Subscribe Now">
+            </form>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 img1">
+        <img src='img/phone.png' class="img-fluid png3">
+    </div>
+</div>
+</div>
+<br>
+<!-- features -->
+<div class="container">
+<div class="row padding text-center">
+    <div class="col-12 feat">
+        <p class="feat-header">FEATURES</p>
+        <p class="feat-title">Do not miss out on the very <br> amazing things you can do with nostalgia</p>
+        <p class="feat-content">Let’s take you around on the interesting things 
+            that awaits you as we prepare to release our application.
+            Take a moment to explore on some of the endless wonders that awaits you.
+        </p>
+    </div>
+</div>
+</div>
+<br>
+<br>
+<!-- feature memories -->
+<div class="container ">
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-6 col-xl-6 ">
+        <img src='img/Group 14.png' class="img-fluid">
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 text-left margin">
+        <p class="header">More than 2k memories</p>
+        <p class="title">Endless list of your cherished
+                memories awaits you.
+        </p>
+        <p class="content">Ever wanted a seamless way to get all
+            your childhood memories at your disposal?Then the wait is over.
+        </p>
+            
+    </div>
+</div>
+</div>
+<br>
+<!-- feature sorting -->
+<div class="container ">
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 text-left margin">
+        <p class="header">Advanced sorting options</p>
+        <p class="title">Let your memories be explored
+            in an ordered manner
+        </p>
+        <p class="content">Worry less about how to access your
+            memories, ranging from loved ones,to events.
+        </p>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-6 col-xl-6 ">
+            <img src='img/Group 15.png' class="img-fluid">
+    </div>
+</div>
+</div>
+<br>
+<!-- feature Never forget -->
+<div class="container">
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-6 col-xl-6 ">
+            <img src='img/Group 16.png' class="img-fluid">
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 text-left margin">
+        <p class="header">Never forget</p>
+        <p class="title">Get notified about your recently unfinished memories</p>
+        <p class="content">Get on-screen notifications about unfinished memories
+            and easily continue with ease and dynamism.</p>
+    </div>
+</div>
+</div>
+<br>
+<!-- feature control -->
+<div class="container">
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 text-left margin">
+        <p class="header">Control your app</p>
+        <p class="title">Easily Browse through your memories</p>
+        <p class="content">Do you want to quickly moved to a previously
+        listened memory? Or even listen to a particular
+        moment on the present one? Nostalgia has got you covered.  
+        </p>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-6 col-xl-6 ">
+        <img src='img/Group 17.png' class="img-fluid">
+    </div>
+</div>
+</div>
+<br>
+<!-- feature bookmark -->
+<div class="container">
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-6 col-xl-6 ">
+        <img src='img/Group 18.png' class="img-fluid">
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 text-left margin">
+        <p class="header">Bookmark that memory</p>
+        <p class="title">Never have difficulties accessing your favourite memories
+        </p>
+        <p class="content">Easily navigate to your memories without having
+            to all the way in search of them.
+        </p>
+    </div>
+</div>
+</div>
+<br>
+ <!-- feature Set up -->
+<div class="container">
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 text-left margin">
+        <p class="header">Set up your environment with ease</p>
+        <p class="title">You should have control of your app, and that’s it is</p>
+        <p class="content">Do you want to quickly moved to a previously
+        listened memory? Or even listen to a particular
+        moment on the present one? Nostalgia has got you covered.  
+        </p>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-6 col-xl-6 ">
+            <img src='img/Group 19.png' class="img-fluid">
+    </div>
+</div>
+</div>
+<br>
+<br>
+<!-- footer -->
+<footer>
+<div class="container-fluid footer">
+<div class="footer-text">
+    <a class="navbar-brand" ><img src="img/Brain Emoji.svg">
+        <div class="brand-text">
+            <span class="text-first">Nostalgia </span>
+            <span class="text-second">...relieving your childhood over again</span>
+        </div>
+    </a> 
+    <p class="new-content2">Be the first to get notified about our app release</p>
+    <div class=" col-8 tnp-subscription2">
+        <form class = tnp-form2 method="post" method="POST" action="register">
+            <input class="tnp-email2" placeholder="Email address">
+            <input class="tnp-submit2 btn-primary" type="submit" value="Subscribe Now">
+        </form>
+    </div> 
+</div>
+<div class="footer-image">
+    <img src="img/Brain Emoji2.png" class="img-fluid">
+</div>
+</div>
+</footer>
+</body>
+</html>
