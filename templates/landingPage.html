@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,16 +8,16 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-	<link href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet">
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href= "{{url_for('static', filename='css/styles.css')}}"rel="stylesheet">
 </head>
 <body>
 <!-- Navigation -->
 <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
     <div class="container-fluid brand">
-        <a class="navbar-brand" ><img src="{{ url_for('static',filename = 'img/Brain Emoji.svg')}}">
+        <a class="navbar-brand" ><img src="{{url_for('static',filename = 'img/Brain Emoji.svg')}}">
             <div class="brand-text">
                 <span class="text-first">Nostalgia </span>
                 <span class="text-second">...relieving your childhood over again</span>
@@ -25,39 +26,30 @@
     </div>  
 </nav>
 <!-- Newapp -->
-<br>
-<br>
-<br>
+
+<br class="br">
+<br class="br">
 <div class="container">
 <div class="row new-app">
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 new ">
-        <p class="new-header">New app in the block</p>
-        <p class="new-title" >Nostalgia would never let you worry about your childhood memories again.</p> 
+    <div class="col-sm-12 col-md-6 new margin">
+        <h5 class="header">New app in the block</h5>
+        <h1 class="title" >Nostalgia would never let you worry about your childhood memories again.</h1> 
         <br>
-        <p class="new-content">Be the first to get notified about our app release</p>
+        <p class="content">Be the first to get notified about our app release</p>
         <div class=" col-8 tnp-subscription">
-        {% if message == 'success' %}
-        <div class="alert alert-success" role="alert">
-            Email captured successfully
-          </div>
-        {% elif message == 'failed' %}
-        <div class="alert alert-danger" role="alert">
-            Email already captured
-          </div>
-        {% endif %}
-            
-            <form class = tnp-form  method="POST"  action="{{ url_for('index')}}">
-                <input class="tnp-email" type="email" name='email' placeholder="email address">
+            <form class = tnp-form method="post" method="POST" action="register">
+                <input class="tnp-email" placeholder="Email address">
                 <input class="tnp-submit btn-primary" type="submit" value="Subscribe Now">
             </form>
         </div>
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 img1">
-        <img src="{{url_for('static',filename = 'img/phone.png')}}" class="img-fluid png3">
+    <div class="col-sm-12 col-md-6 new-image">
+        <img src="{{ url_for('static',filename = 'img/Phone.png')}}" class="img-fluid">
     </div>
 </div>
 </div>
 <br>
+
 <!-- features -->
 <br>
 <div class="container ">
@@ -78,7 +70,7 @@
 <div class="container ">
 <div class="row memories-container">
     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-6 col-xl-6 ">
-        <img src="{{url_for('static',filename = 'img/Group14.png')}}"class="img-fluid memories-image">
+        <img src="{{url_for('static',filename = 'img/Group 14.png')}}"class="img-fluid memories-image">
     </div>
     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 margin memories-text view">
         <h5 class="header">More than 2k memories</h5>
@@ -106,7 +98,7 @@
         </p>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
-            <img src="{{url_for('static',filename = 'img/Group15.png')}}" class="img-fluid">
+            <img src="{{url_for('static',filename = 'img/Group 15.png')}} class="img-fluid">
     </div>
 </div>
 </div>
@@ -115,7 +107,7 @@
 <div class="container">
 <div class="row never-container">
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 never-image">
-            <img src="{{url_for('static',filename = 'img/Group16.png')}}"class="img-fluid">
+            <img src="{{url_for('static',filename = 'img/Group 16.png')}}class="img-fluid">
     </div>
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  margin never-text view">
         <p class="header">Never forget</p>
@@ -138,7 +130,7 @@
         </p>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-6 col-xl-6 ">
-        <img src="{{url_for('static',filename = 'img/Group17.png')}}"class="img-fluid">
+        <img src="{{url_for('static',filename = 'img/Group 17.png')}}class="img-fluid">
     </div>
 </div>
 </div>
@@ -147,7 +139,7 @@
 <div class="container">
 <div class="row bookmark-container">
     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-6 col-xl-6 bookmark-image">
-        <img src="{{url_for('static',filename = 'img/Group18.png')}}"class="img-fluid">
+        <img src="{{url_for('static',filename = 'img/Group 18.png')}}class="img-fluid">
     </div>
     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6 col-xl-6  margin bookmark-text view">
         <p class="header">Bookmark that memory</p>
@@ -172,7 +164,7 @@
         </p>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-6 col-xl-6 ">
-            <img src="{{url_for('static',filename = 'img/Group19.png')}}"class="img-fluid">
+            <img src="{{url_for('static',filename = 'img/Group 19.png')}}class="img-fluid">
     </div>
 </div>
 </div>
@@ -201,7 +193,7 @@
 <script>
     window.sr = ScrollReveal();
     sr.reveal('.new-app',{
-        duration:1000,
+        duration:2000,
         origin:'bottom',
         distance:'300px'
     });
