@@ -4,7 +4,7 @@ class Database:
 
     @staticmethod
     def createDb() -> None:
-        connection = sqlite3.connect("./email_db.db")
+        connection = sqlite3.connect("./database/email_db.db")
         create_table = "CREATE TABLE IF NOT EXISTS EmailDB (id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT NOT NULL)"
         connection.execute(create_table)
         connection.commit()
@@ -12,7 +12,7 @@ class Database:
 
     @staticmethod
     def emailExists(email: str) -> bool:
-        connection = sqlite3.connect("./email_db.db")
+        connection = sqlite3.connect("./database/email_db.db")
         cursor = connection.cursor()
         Check ="SELECT * from EmailDB where email=?"
         cursor.execute(Check, (email,))
@@ -26,7 +26,7 @@ class Database:
     @staticmethod
     def insertEmailInDB(email: str) -> bool:
         # // db query to insert to db
-        connection = sqlite3.connect("./email_db.db")
+        connection = sqlite3.connect("./database/email_db.db")
         cursor = connection.cursor()
         insert_db ="INSERT INTO EmailDB VALUES (NULL, ?)"
         cursor.execute(insert_db, (email,))
